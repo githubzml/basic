@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a1 {
+            text-align: right;
+        }
+
+        .a2 {
+            /* 1.一行高度 */
+            line-height: 32px;
+            /* 跟文字大小成比例 */
+            /* line-height: 1; */
+        }
+
+        .a4 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            /* 2.英文和数字强烈折行 */
+            word-break: break-all;
+        }
+
+        .a5 {
+            /* 3.复合属性 */
+            /* 先写复合 在写单一 */
+            width: 600px;
+            height: 600px;
+            background: red url(./pictures/a1.png) no-repeat center center;
+        }
+
+        /* 4. 命名 驼峰 短线 下划线 */
+        /* 5. 选择器 */
+        /* * 通配符 */
+        /* 6 层次选择器 
+        div p 后代
+        div > p 父子
+        div ~ p 兄弟
+        div + p 相邻 */
+        /* 7. 属性选择器 */
+        /* *class 部分
+        ^class 起始
+        $class 结束
+        [][] 组合 */
+        .a6 p[class=b1] {
+            color: aqua;
+        }
+
+        /* 8.伪类选择器 */
+        .a7:active {
+            /* 点击触发 */
+            color: blue;
+        }
+
+        /* :: after :: before :focus :disabled :checked */
+
+        /* 文字样式继承
+        布局不继承 */
+        /* 
+        id 权重100
+        class 权重10
+        tag 权重1 */
+        /* 权重比较
+        约分比较 */
+
+        .a8 {
+            /* 9.margin-top 会有传递问题 */
+            width: 300px;
+            height: 300px;
+            background: blue;
+            border: 1px solid transparent;
+        }
+
+        .a8 .b2 {
+            /* margin-top 会有传递问题 */
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+            /* 解决方法 padding 加边框 */
+            /* margin-left: 20px; */
+            background: beige;
+        }
+
+        /* 10. margin:0 auto */
+        .a9 {
+            width: 300px;
+            height: 200px;
+            background: navy;
+            /* 左右管用 上下不管用 */
+            margin: 0 auto;
+        }
+
+        /* 11 宽高不设置 会自动计算容器大小 节省代码 */
+        .a10 {
+            width: 300px;
+            height: 300px;
+            background: olive;
+        }
+
+        .a10 .b3 {
+            /* width: 100%; */
+            height: 100px;
+            background: palegoldenrod;
+            padding-left: 100px;
+            border-left: 10px solid red;
+        }
+
+        /* 12 div 块 不写宽的时候与宽度 父元素的宽相同 */
+        /* span 行内 不写宽的时候 宽度是由内容撑开的 */
+        /* input select 行内块元素 */
+        /* 13 a标签能嵌套块标签 其他不能 */
+        ul {
+            width: 300px;
+            height: 500px;
+            border: 1px solid #ccc;
+            /* overflow: auto; */
+            overflow-y: scroll;
+        }
+
+        /* 14 opacity background */
+        .a11 {
+            width: 100px;
+            height: 100px;
+            background: bisque;
+            opacity: 0.5;
+        }
+
+        .a12 {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 0, 0, 0.5);
+            /* cursor: pointer; */
+            /* 或者是自定义的图片 都行 */
+            /* cursor: url(./url),auto; */
+        }
+        
+        /* 最大 内容少 自适应
+        最小 内容多 自适应 */
+        .a13 {
+            width: 200px;
+            min-height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a1">
+        This is word
+    </div>
+    <div class="a2">
+        新京报讯
+        （记者吴为）3月6日，北京市新型冠状病毒感染的肺炎疫情防控工作举行第四十二场新闻发布会。北京新冠肺炎疫情防控工作领导小组社区防控组办公室副主任、北京市委组织部副部长、新闻发言人张彤军介绍首都社区防控情况。据介绍，北京目前还有82.7万返京人员处于居家观察，全市疫情防控到了最吃劲的关键时候。
+    </div>
+    <div class="a3">
+        some word enen some word enen some word enen some word enen some word enen some word enen some word enen some
+        word enen some word enen some word enen some word enen some word enen some word enen some word enen some word
+        enen some word enen some word enen some word enen some word enen some word enen some word enen some word enen
+    </div>
+    <div class="a4">
+        aaa nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+    </div>
+    <div class="a5">
+
+    </div>
+    <div class="a6">
+        <p class="b1">b1</p>
+        <p class="b2">b2</p>
+    </div>
+    <div class="a7">
+        enen
+    </div>
+    <div class="a8">
+        <p class="b2">
+
+        </p>
+    </div>
+    <div class="a9"></div>
+    <div class="a10">
+        <div class="b3"></div>
+    </div>
+    <img src="./pictures/02.jpg" alt="">
+
+    <ul>
+        <li>
+            some word some word
+            somewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomewordsomeword
+            some word some word some word some word some wordsome word some word some word
+            some wordsome word some word some word some wordsome word some word some word some word some word some word
+            some word some word some word some word some word some word word some word some word some word some word
+            some word some word some word some word word some word some word some word some word some word some word
+            some word some word word some word some word some word some word some word some word some word some word
+            word some word some word some word some word some word some word some word some word word some word some
+            word some word some word some word some word some word some word word some word some word some word some
+            word some word some word some word some word word some word some word some word some word some word some
+            word some word some word word some word some word some word some word some word some word some word some
+            word word some word some word some word some word some word some word some word some word word some word
+            some word some word some word some word some word some word some word
+        </li>
+    </ul>
+    <div class="a11">123</div>
+    <div class="a12">234</div>
+    <div class="a13">
+        昨天白天，北京市天空云量逐步增多，早晨南郊观象台最低气温为零下1℃，上班时城区大部气温在零下1℃至3℃，体感依旧寒冷。傍晚时分，北京多区出现小雨天气，部分地区还飘落小雪，延庆区气象台发布道路结冰黄色预警信号。
+
+        预计今天，北京市气温较昨天将有所回升。根据北京市气象台今早6时发布的最新预报，今天白天，北京晴间多云（早晨东部、南部有轻雾或雾），北转南风3级左右，最高气温14℃；夜间晴转多云，有雾或轻雾，南转北风1、2级，最低气温1℃。
+    </div>
+</body>
+
+</html>

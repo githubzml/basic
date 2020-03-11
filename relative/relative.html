@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+        }
+
+        .d2 {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            /* 1.不使元素脱离文档流 */
+            /* 2.相对与自身 */
+            position: relative;
+            left: 10px;
+        }
+
+        .d3 {
+            width: 100px;
+            height: 100px;
+            background: khaki;
+        }
+        .d4{
+            /* 1.使元素脱离文档流
+            2.使内联元素支持宽高
+            3.祖先有相对于祖先 祖先没有 相对于文档 */
+            position: absolute;
+            /* left: 10px; */
+            top:20px;
+            width:50px;
+            height: 50px;
+            background: magenta;
+        }
+        .d5{
+            background: maroon;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3">
+            <div class="d4"></div>
+        </div>
+        <div class="d5">some content</div>
+    </div>
+</body>
+
+</html>

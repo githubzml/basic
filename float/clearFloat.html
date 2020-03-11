@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            border: 1px solid black;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 200px;
+            background: red;
+            float: left;
+        }
+        /* 伪类元素清除浮动 */
+        .clear::after {
+            content: "";
+            clear: both;
+            /* clear只操作块级标签 */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box1 clear">
+        <div class="box2"></div>
+        <!-- <div class="clear">one null p</div> -->
+    </div>
+    bbb
+</body>
+
+</html>

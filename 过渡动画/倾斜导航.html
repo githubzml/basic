@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul {
+            width: 440px;
+            margin: 30px auto;
+            overflow: hidden;
+        }
+
+        ul li {
+            width: 100px;
+            margin: 0 5px;
+            float: left;
+            text-align: center;
+            line-height: 30px;
+            /* padding: 10px; */
+            background: red;
+            transform: skewX(-30deg);
+        }
+
+        ul .active {
+            background: blue;
+        }
+
+        ul li span {
+            display: block;
+            transform: skewX(30deg);
+        }
+
+        ul li:first-child {
+            padding-left: 10px;
+            margin-left: -10px;
+        }
+
+        ul li:last-child {
+            padding-right: 20px;
+            margin-right: -20px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="active"><span>首页</span></li>
+        <li><span>关于我们</span></li>
+        <li><span>联系方式</span></li>
+        <li><span>大酬宾</span></li>
+    </ul>
+</body>
+
+</html>

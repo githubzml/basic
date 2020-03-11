@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            margin: 0;
+        }
+
+        div {
+            width: 100%;
+            border: 1px solid #ccc
+        }
+
+        .k1 {
+            /* 1.float:; 脱离文档流 */
+            /* 如果之前已经有浮动元素 会挨着浮动元素进行排列 */
+            /* 2. 
+            只会影响后面的元素
+            内容默认提高半层
+            默认宽度根据内容决定
+            换行排列
+            主要给块元素添加 也可以给行内元素添加
+             */
+            width: 100px;
+            height: 100px;
+            /* float: left; */
+            background: yellow;
+
+        }
+
+        .k2 {
+            width: 200px;
+            height: 200px;
+            background: red;
+            float: left;
+        }
+
+        .k4 {
+            width: 300px;
+            height: 300px;
+            background: firebrick;
+
+        }
+
+        .k3 {
+            background: greenyellow;
+            /* float: left; */
+        }
+
+        ul {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            width: 100px;
+            height: 100px;
+            background: fuchsia;
+            border: 1px solid yellow;
+            box-sizing: border-box;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="k1"></p>
+        <p class="k2"></p>
+        <p class="k4"></p>
+        <p class="k3">some word</p>
+
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+</body>
+
+</html>

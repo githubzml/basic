@@ -1,0 +1,30 @@
+<div>
+    HTML + CSS
+</div>
+<header title="头部">gaga</header>
+<style>
+    div {
+        color: red;
+        font-style: italic;
+    }
+</style>
+<script>
+    let ele = document.querySelector('div');
+    let isFlag = true;
+    let timer = null;
+    ele.onmouseover = function () {
+        timer = setInterval(() => {
+            if (isFlag) {
+                ele.style.color = "blue";
+                ele.style.fontStyle = "normal";
+            } else {
+                ele.style.color = "red";
+                ele.style.fontStyle = "italic";
+            }
+            isFlag = !isFlag;
+        }, 500)
+    }
+    ele.onmouseout = function () {
+        clearInterval(timer);
+    }
+</script>
